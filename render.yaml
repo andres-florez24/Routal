@@ -4,8 +4,7 @@ services:
     env: docker
     plan: free
     numInstances: 1
-    image: n8nio/n8n:latest
-    dockerCommand: n8n start
+    dockerImage: n8nio/n8n:latest
     envVars:
       - key: N8N_HOST
         value: routal-n8n-bot.onrender.com
