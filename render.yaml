@@ -1,16 +1,16 @@
 services:
   - type: web
     name: routal-n8n-bot
-    env: docker
+    runtime: docker
+    dockerImage: n8nio/n8n:latest
     plan: free
     numInstances: 1
-    dockerImage: n8nio/n8n:latest
     envVars:
-      - key: N8N_HOST
-        value: routal-n8n-bot.onrender.com
       - key: N8N_PORT
         value: "8080"
       - key: PORT
         value: "8080"
+      - key: N8N_HOST
+        value: routal-n8n-bot.onrender.com
       - key: WEBHOOK_URL
         value: https://routal-n8n-bot.onrender.com/
